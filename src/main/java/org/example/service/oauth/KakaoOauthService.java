@@ -3,8 +3,6 @@ package org.example.service.oauth;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -38,6 +36,8 @@ public class KakaoOauthService {
             bw.flush();
 
             System.out.println("ACCESS TOKEN 요청 URL : " + sb);
+
+            // -> Controller?
 
             int responseCode = conn.getResponseCode();
             System.out.println("ACCESS TOKEN 응답 코드 : " + responseCode);

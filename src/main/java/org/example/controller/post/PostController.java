@@ -88,7 +88,6 @@ public class PostController {
     @PostMapping("/error")
     public String error(HttpServletRequest request) {
         log.info("===========> 강제 에러 발생 , " + request.getRequestURI());
-
         throw new RuntimeException("의도적인 예외");
     }
 
